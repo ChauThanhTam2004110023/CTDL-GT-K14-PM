@@ -7,11 +7,9 @@ public class TestDrive {
         System.out.println("Weight: " +cow.weight);
         cow.weight = 15;
 
-        cow = new Cow(5);
-        System.out.println("Weight: " +cow.weight);
-        cow.weight = 5;
-
         cow = new Cow(25.5, "Tây Ban Nha", "Đen");
-        System.out.println("weight: " +cow.weight+ "breed: " +cow.breed+ "color: " +cow.color);
+        System.out.println("weight: " +cow.weight);
+        System.out.println("Weight: " +cow.color);
+        System.out.println("Weight: " +cow.breed);
     }
 }
