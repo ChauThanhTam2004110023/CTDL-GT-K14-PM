@@ -1,6 +1,6 @@
 package VN.WEEK3;
 
-public class TestSurplus {
+public class TestAccount {
     public static void main(String[] args) {
         account Account;
         Account = new account("Châu Thanh Tâm" , 1234 , 16.000);
