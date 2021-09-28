@@ -1,0 +1,161 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch CTGtMinhHoaMang",
+            "request": "launch",
+            "mainClass": "comChauThanhTam2004110023.Tuan04.CTGtMinhHoaMang",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestAccount",
+            "request": "launch",
+            "mainClass": "VN.WEEK3.TestAccount",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestBook",
+            "request": "launch",
+            "mainClass": "VN.WEEK3.TestBook",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestComputer",
+            "request": "launch",
+            "mainClass": "VN.WEEK3.TestComputer",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestDrive",
+            "request": "launch",
+            "mainClass": "VN.WEEK3.TestDrive",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestStaff",
+            "request": "launch",
+            "mainClass": "VN.WEEK3.TestStaff",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestXe",
+            "request": "launch",
+            "mainClass": "VN.WEEK3.TestXe",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch inBangCuuChuong",
+            "request": "launch",
+            "mainClass": "VN.WEEK3.inBangCuuChuong",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch chuViDienTichHCN",
+            "request": "launch",
+            "mainClass": "WEEK2.chuViDienTichHCN",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch diemTrungBinh",
+            "request": "launch",
+            "mainClass": "WEEK2.diemTrungBinh",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch lenhSwitch",
+            "request": "launch",
+            "mainClass": "WEEK2.lenhSwitch",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch namSinhNamTuoi",
+            "request": "launch",
+            "mainClass": "WEEK2.namSinhNamTuoi",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch ngayThangNam",
+            "request": "launch",
+            "mainClass": "WEEK2.ngayThangNam",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch phuongTrinhBacHai",
+            "request": "launch",
+            "mainClass": "WEEK2.phuongTrinhBacHai",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch phuongTrinhBacNhat",
+            "request": "launch",
+            "mainClass": "WEEK2.phuongTrinhBacNhat",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch sinhVien",
+            "request": "launch",
+            "mainClass": "WEEK2.sinhVien",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch taoMenu",
+            "request": "launch",
+            "mainClass": "WEEK2.taoMenu",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch tinhTienDien",
+            "request": "launch",
+            "mainClass": "WEEK2.tinhTienDien",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Mang",
+            "request": "launch",
+            "mainClass": "comChauThanhTam2004110023.Mang",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch MangDog",
+            "request": "launch",
+            "mainClass": "comChauThanhTam2004110023.MangDog",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch MangSinhVien",
+            "request": "launch",
+            "mainClass": "comChauThanhTam2004110023.MangSinhVien",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        }
+    ]
+}
