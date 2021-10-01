@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch account",
+            "request": "launch",
+            "mainClass": "comChauThanhTam2004110023.Tuan04.account",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch computer",
+            "request": "launch",
+            "mainClass": "comChauThanhTam2004110023.Tuan04.computer",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Staff",
+            "request": "launch",
+            "mainClass": "comChauThanhTam2004110023.Tuan04.Staff",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Book",
+            "request": "launch",
+            "mainClass": "comChauThanhTam2004110023.Tuan04.Book",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Car",
+            "request": "launch",
+            "mainClass": "comChauThanhTam2004110023.Tuan04.Car",
+            "projectName": "CTDL_GT_WEEK_76dcb45e"
+        },
+        {
+            "type": "java",
             "name": "Launch CTGtMinhHoaMang",
             "request": "launch",
             "mainClass": "comChauThanhTam2004110023.Tuan04.CTGtMinhHoaMang",

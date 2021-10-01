@@ -11,12 +11,12 @@ public class MangSinhVien {
         {
             System.out.println("Nhap ten sinh vien: ");
             String tenSinhVien = sc.nextLine();
+            System.out.println("Nhap que quan vao: ");
+            String queQuan = sc.nextLine();
             System.out.println("Nhap tuoi vao: ");
             int tuoi = sc.nextInt();
             System.out.println("Nhap mssv: ");
             int mssv = sc.nextInt();
-            System.out.println("Nhap que quan vao: ");
-            String queQuan = sc.nextLine();
 
             for(SinhVien sinhvien: MangSinhVien)
             {
