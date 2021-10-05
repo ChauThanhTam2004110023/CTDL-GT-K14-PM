@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch insonguyento",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan03.insonguyento",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch inbangcuuchuong",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan03.inbangcuuchuong",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch inxeploai",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan04.inxeploai",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch insonguyento",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan04.insonguyento",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch inbangcuuchuong",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan04.inbangcuuchuong",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
             "name": "Launch testmaytinh",
             "request": "launch",
             "mainClass": "com.tamct200411023.tuan03.testmaytinh",
