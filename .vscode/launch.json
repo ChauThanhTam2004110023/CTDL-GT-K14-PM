@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch taoMenu",
+            "request": "launch",
+            "mainClass": "taoMenu",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch taoMenu",
+            "request": "launch",
+            "mainClass": "com.tamct2004110023.tuan1.taoMenu",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch tinhTienDien",
+            "request": "launch",
+            "mainClass": "com.tamct2004110023.tuan1.tinhTienDien",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch phuongTrinhBacHai",
+            "request": "launch",
+            "mainClass": "phuongTrinhBacHai",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch phuongTinhBacHai",
+            "request": "launch",
+            "mainClass": "com.tamct2004110023.tuan1.phuongTinhBacHai",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch theTichKhoiLapPhuong",
+            "request": "launch",
+            "mainClass": "com.tamct2004110023.tuan1.theTichKhoiLapPhuong",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch chuViDienTichHCN",
+            "request": "launch",
+            "mainClass": "com.tamct2004110023.tuan1.chuViDienTichHCN",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch sinhvien",
+            "request": "launch",
+            "mainClass": "com.tamct2004110023.tuan1.sinhvien",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
             "name": "Launch account",
             "request": "launch",
             "mainClass": "comChauThanhTam2004110023.Tuan04.account",
