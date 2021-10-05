@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch testmaytinh",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan03.testmaytinh",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch testnhanvien",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan03.testnhanvien",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch testxe",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan03.testxe",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch testsach",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan03.testsach",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
             "name": "Launch taomenu",
             "request": "launch",
             "mainClass": "com.tamct200411023.tuan02.taomenu",
