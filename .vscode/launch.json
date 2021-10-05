@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch taomenu",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan01.taomenu",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch tinhsodien",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan01.tinhsodien",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch phuongtrinhbachai",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan01.phuongtrinhbachai",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch tinhdiemtrungbinh",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan01.tinhdiemtrungbinh",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch chividientichhcn",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan01.chividientichhcn",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
             "name": "Launch chuViDienTichHCN",
             "request": "launch",
             "mainClass": "com.tamct2004110023.tuan01.chuViDienTichHCN",
