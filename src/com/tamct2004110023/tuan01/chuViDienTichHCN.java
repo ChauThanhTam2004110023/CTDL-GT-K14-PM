@@ -1,4 +1,4 @@
-package WEEK2;
+package com.tamct2004110023.tuan01;
 
 import java.util.Scanner;
 

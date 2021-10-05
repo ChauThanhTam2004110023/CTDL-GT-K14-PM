@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch chuViDienTichHCN",
+            "request": "launch",
+            "mainClass": "com.tamct2004110023.tuan01.chuViDienTichHCN",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
             "name": "Launch taoMenu",
             "request": "launch",
             "mainClass": "taoMenu",
