@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch nhanvientestdrive",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan04.nhanvientestdrive",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch xetestdrive",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan04.xetestdrive",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch maytinhtestdrive",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan04.maytinhtestdrive",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch xeploai",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan03.xeploai",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
             "name": "Launch insonguyento",
             "request": "launch",
             "mainClass": "com.tamct200411023.tuan03.insonguyento",
