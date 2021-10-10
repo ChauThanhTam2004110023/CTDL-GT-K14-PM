@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TestSanPham",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan05.TestSanPham",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch Collections",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan05.Collections",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch tongArrayList",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan05.tongArrayList",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch arryaList",
+            "request": "launch",
+            "mainClass": "vn.edu.giadinh.tuan05.arryaList",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArrayList",
+            "request": "launch",
+            "mainClass": "vn.edu.giadinh.tuan05.ArrayList",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch CTDLMang",
+            "request": "launch",
+            "mainClass": "vn.edu.giadinh.tuan05.CTDLMang",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch mangSonguyen",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan05.mangSonguyen",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
             "name": "Launch nhanvientestdrive",
             "request": "launch",
             "mainClass": "com.tamct200411023.tuan04.nhanvientestdrive",
