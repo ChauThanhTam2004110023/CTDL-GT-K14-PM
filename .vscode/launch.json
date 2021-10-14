@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BTThem",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan05.BTThem",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch DanhSachSinhVien",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan05.DanhSachSinhVien",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestSV",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan05.TestSV",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch testDanhSachSV",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan05.testDanhSachSV",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
             "name": "Launch TestSanPham",
             "request": "launch",
             "mainClass": "com.tamct200411023.tuan05.TestSanPham",
