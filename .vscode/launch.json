@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch testmylinkedlist",
+            "request": "launch",
+            "mainClass": "vn.edu.giadinh.tuan07.testmylinkedlist",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestLinkedList",
+            "request": "launch",
+            "mainClass": "vn.edu.giadinh.tuan07.TestLinkedList",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestMinhHoa",
+            "request": "launch",
+            "mainClass": "vn.edu.giadinh.tuan07.TestMinhHoa",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch duyetLinkedList",
+            "request": "launch",
+            "mainClass": "vn.edu.giadinh.tuan07.duyetLinkedList",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
             "name": "Launch BTThem",
             "request": "launch",
             "mainClass": "com.tamct200411023.tuan05.BTThem",
