@@ -1,44 +1,40 @@
-package vn.edu.giadinh.tuan07;
+package com.tamct200411023.tuan07;
 
-public class NodeLinkedList {
-    
+public class MyLinkedList {
     Node head = null;
     Node tail = null;
 
-    public NodeLinkedList() {}
+    public MyLinkedList(){}
 
-    void add(int data)
+    void add(String data)
     {
-        //Tạo Node 
         Node newNode = new Node(data);
-        if(head == null) 
+        if(head == null)
         {
-            //Thêm vò ds rỗng
             head = newNode;
             tail = newNode;
-        }    
+        }
         else
         {
             tail.next = newNode;
             tail = newNode;
         }
     }
-
-    void remove()
-    {
-
+    void remove(){
+       
     }
 
     void print()
     {
         Node current = head;
+
         if(head == null)
         {
-            System.out.println("Danh sách rỗng");
-            return ;
+            System.out.println("Danh Sach rong!!");
+            return;
         }
 
-        System.out.println("Các nút trong danh sách");
+        System.err.println("Cac nut trong danh sach ");
         while(current != null)
         {
             System.out.println(current.data);
@@ -46,9 +42,6 @@ public class NodeLinkedList {
         }
     }
 
-    void find()
-    {
-
-    }
+    void find(){}
 
 }
