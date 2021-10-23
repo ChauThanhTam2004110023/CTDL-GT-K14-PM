@@ -1,27 +1,30 @@
 package com.tamct200411023.tuan07;
 
 public class MyLinkedList {
+    //Head la 
     Node head = null;
     Node tail = null;
 
     public MyLinkedList(){}
 
-    void add(String data)
+    void add(int data)
     {
         Node newNode = new Node(data);
         if(head == null)
         {
+            //Dai dien cho nut dau va cuo ds, cung lien ket 
             head = newNode;
             tail = newNode;
         }
         else
         {
+            //tro den newNode
             tail.next = newNode;
             tail = newNode;
         }
     }
     void remove(){
-       
+
     }
 
     void print()
@@ -42,6 +45,9 @@ public class MyLinkedList {
         }
     }
 
-    void find(){}
+    void find(){
+      
+
+    }
 
 }

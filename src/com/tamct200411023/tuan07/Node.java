@@ -2,23 +2,25 @@ package com.tamct200411023.tuan07;
 
 public class Node {
 
-    String data;
+    //Noi dung
+    int data;
 
-    int pos;
+    //Lien ket den node tiep theo
+    //Tham chieu
+    Node next; //Bien tham chieu node
 
-    Node next;
+    public Node(){}
 
-    public Node() {}
-
-    public Node(String d)
+    public Node(int d)
     {
         data = d;
-        next = null;
     }
 
-    public Node(String d, Node node)
+    public Node(int d, Node n)
     {
+        next = n;
         data = d;
-        next = node;
     }
+
+
 }
