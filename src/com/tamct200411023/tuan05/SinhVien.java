@@ -30,4 +30,8 @@ public class SinhVien {
         System.out.println("Nhap diem trung binh: ");
         diemTB = sc.nextDouble();
     }
+
+    public void xuatThongTin(){
+        
+    }
 }

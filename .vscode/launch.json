@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch QueueDemoPrograming",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan08.QueueDemoPrograming",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch StackDemoPrograming",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan08.StackDemoPrograming",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch QuanLySinhVienTestDrive",
+            "request": "launch",
+            "mainClass": "vn.edu.giadinh.tuan07.QuanLySinhVienTestDrive",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
             "name": "Launch TestSinhVien",
             "request": "launch",
             "mainClass": "com.tamct200411023.tuan05.TestSinhVien",
