@@ -22,14 +22,17 @@ public class ArrayListApple {
         Apple ap;
         System.out.println("Nhap tao: ");
         int n = sc.nextInt();
-        System.out.println("Nhap danh sach tao: ");
+        while(true)
+        {
         for(int i = 0 ; i < n; i++)
         {
             System.out.println("Tao thu: " +(i+1)+ ": ");
             ap = new Apple();
             ap.inThongTin();
+            list.add(ap);
         }
     }
+}
     public void hienThiDanhSach()
     {
         for(Apple ap : list)
@@ -37,6 +40,7 @@ public class ArrayListApple {
             ap.inThongTin();
         }
     }
+
 
     public void timKiemTheoTen()
     {

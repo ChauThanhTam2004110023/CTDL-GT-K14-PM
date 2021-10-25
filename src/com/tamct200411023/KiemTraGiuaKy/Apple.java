@@ -1,6 +1,6 @@
 package com.tamct200411023.KiemTraGiuaKy;
-import java.util.Scanner;
 
+import java.util.Scanner;
 
 public class Apple {
     Scanner sc = new Scanner(System.in);
@@ -32,7 +32,7 @@ public class Apple {
     public double khoiLuong()
     {
         return khoiLuong;
-    }
+    } 
 
     public void inThongTin()
     {
