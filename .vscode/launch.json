@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TestApple",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.KiemTraGiuaKy.TestApple",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestArrayList",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.KiemTraGiuaKy.TestArrayList",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
             "name": "Launch QueueDemoPrograming",
             "request": "launch",
             "mainClass": "com.tamct200411023.tuan08.QueueDemoPrograming",
