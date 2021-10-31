@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ProgrammingDeque",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan08.ProgrammingDeque",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch Depue",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan08.Depue",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProgrammingQueue",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan08.ProgrammingQueue",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch ViDuQueue",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan08.ViDuQueue",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestNode",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan08.TestNode",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestApple",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.kiemTraGiuaKy.TestApple",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
             "name": "Launch QuanLySinhVien",
             "request": "launch",
             "mainClass": "vn.edu.giadinh.tuan05.QuanLySinhVien",
