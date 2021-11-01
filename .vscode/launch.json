@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MinhHoaNhiPhan",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan09.MinhHoaNhiPhan",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinhHoaCaiDatGiaiThuat",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan09.MinhHoaCaiDatGiaiThuat",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinhoaInsertionSort",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan09.MinhoaInsertionSort",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinhhoabubbleSort",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan09.MinhhoabubbleSort",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinhHoa",
+            "request": "launch",
+            "mainClass": "com.tamct200411023.tuan09.MinhHoa",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
             "name": "Launch ProgrammingDeque",
             "request": "launch",
             "mainClass": "com.tamct200411023.tuan08.ProgrammingDeque",
