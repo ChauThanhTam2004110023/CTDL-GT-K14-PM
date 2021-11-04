@@ -1,109 +1,47 @@
 package vn.edu.giadinh.tuan05;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class QuanLySinhVien {
-    public static void main(String[] args) {
-        QuanLySinhVien ql = new QuanLySinhVien();
-        ql.menu();
-    }
+    static ArrayList<SinhVien> dssv = new ArrayList<>();
+    static Scanner sc = new Scanner(System.in);
 
-    ArrayList<SinhVien> list = new ArrayList<>();
-    Scanner sc = new Scanner(System.in);
-
-    public void Nhap()
+    static void themSV(SinhVien sv)
     {
-        SinhVien sinhVien = new SinhVien();   
-        System.out.println("Nhập số lượng sinh viên: ");
+        dssv.add(sv);
+    }
+    static void nhapDanhSach(Scanner sc)
+    {
+        SinhVien sv;
+        System.out.println("Nhap so luong sinh vien vao");
         int n = sc.nextInt();
-        while(true)
-        {
-            for(int i = 0; i < n -1 ; i++)
-            {
-                sinhVien.nhapThongTin();
-                sc.nextLine();
-            }
-            sc.nextLine();
-        }
-    }
-
-    public void xuat()
-    {
-        for(SinhVien sinhVien: list)
-        {
-            sinhVien.inThongTin();
-        }
-    }
-
-    public void sapXep()
-    {
-        System.out.println("Sắp xếp danh sách");
-        Collections.sort(list, (a,b) -> (int)(a.getdiemTB() - b.getdiemTB()));
-        Collections.reverse(list);
-        xuat();
-    }
-
-    public void timKiem()
-    {
-        System.out.println("Nhap ho va ten: ");
-        sc.nextLine();
-        String hoVaTen = sc.nextLine();
-        int n = sc.nextInt();
-        String a[] = new String[100];
-        sc.nextLine();
-        list.indexOf(hoVaTen);
+        System.out.println("Nhap danh sach sinh vien: ");
         for(int i = 0; i < n; i++)
         {
-            a[i] =sc.nextLine();
+            System.out.println("Sinh vien thu" +i+1+ ":");
+            sv = new SinhVien();
+            sv.nhapThongTin();
+            themSV(sv);
         }
-        for(int i = 0; i < n; i++)
-        {
-            System.out.println(a[i]);
-        }
-        for(int i = 0; i < a.length; i++)
-        {
-            if(a[i].equals(hoVaTen))
-            {
-                System.out.println(" " +a[i]);
-            }
-        }
-        xuat();
     }
-
-    public void timVaSua()
+    static void hienThiDanhSach()
     {
-        System.out.println("Nhap ho va ten can sua: ");
-        String hovaten = sc.nextLine();
-        for(SinhVien sv: list)
+        for(SinhVien sv : dssv)
         {
             sv.inThongTin();
         }
     }
 
-    public void menu()
+    static void timKiem(String name)
     {
-        System.out.println("_-------MENU---------");
-        System.out.println("1. Nhap sinh vien");
-        System.out.println("2. Xuat sinh vien");
-        System.out.println("3. Xuat danh sach theo diem");
-        System.out.println("4. Tim kiem thoe ten");
-        System.out.println("5. Tim va sua");
-        System.out.println("6. Ket thuc");
-        System.out.println("Vui long chon chuc nang: ");
-        int n = sc.nextInt();
-
-        switch(n)
+        for(SinhVien sv : dssv)
         {
-            case 1: Nhap(); break;
-            case 2: xuat(); break;
-            case 3: sapXep(); break;
-            case 4: timKiem(); break;
-            case 5: timVaSua(); break;
-            case 6: System.exit(0);
-            default: System.out.println("Nhap sai!!");
+            if(name.equals(sv.gettenSinhVien()));
+            {
+                sv.inThongTin();
+            }
         }
-        while(true);
     }
+
 }

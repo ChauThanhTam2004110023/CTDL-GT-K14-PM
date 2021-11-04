@@ -1,38 +1,44 @@
 package com.tamct200411023.tuan09;
 
 public class MinhHoaNhiPhan {
-    int binarySearch(int arr[], int l, int r, int x)
+    //private static int binarySearch;
+
+    int binarySearch(int arr[], int x)
     {
-        if(r >= l)
+        int l = 0, r = arr.length - 1;
+        while(l <= r)
         {
-            int mid = l + (r - 1)/2;
-            //Nếu phần tử chính giữa
-            if(arr[mid] == x)
+            int m = l + (r - l)/2;
+            if(arr[m] == x)
             {
-                return mid;
+                return m;
             }
-            //Phần tử nhỏ hơn ở giữa
-            if(arr[mid] > x)
+            if(arr[m] < x)
             {
-                return binarySearch(arr, l, mid - 1, x);
+                //return binarySearch(arr, l);
+                l = m + 1;
             }
             else
             {
-                return binarySearch(arr, mid + 1, r, x);
+                r = m -1;
             }
         }
         return -1;
     }
 
     public static void main(String[] args) {
-        MinhHoaNhiPhan ob = new MinhHoaNhiPhan();
-        int arr[] = { 2, 4, 9, 10, 11, 22};
-        int n = arr.length;
-        int x = 9;
-        int result = ob.binarySearch(arr, 0, n - 1, x);
-        if (result == -1)
-            System.out.println("Phần tử không tồn tại.");
+        MinhHoaNhiPhan mh = new MinhHoaNhiPhan();
+        int arr[] = {2,3,4,10,40};
+        //int n = arr.length;
+        int x = 10;
+        int result = mh.binarySearch(arr, x);
+        if(result == -1)
+        {
+            System.out.println("Phan tu khong ton tai.");
+        }
         else
-            System.out.println("Phần tử được tìm thấy tại vị trí: " + result);
+        {
+            System.out.println("Phan tu duôc sap xep la: " +"index" +result);
+        }
     }
 }

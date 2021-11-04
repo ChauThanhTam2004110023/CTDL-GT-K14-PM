@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TestDrive",
+            "request": "launch",
+            "mainClass": "vn.edu.giadinh.tuan07.TestDrive",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainClass",
+            "request": "launch",
+            "mainClass": "vn.edu.giadinh.tuan05.MainClass",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "vn.edu.giadinh.tuan07.Test",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
             "name": "Launch MinhHoaNhiPhan",
             "request": "launch",
             "mainClass": "com.tamct200411023.tuan09.MinhHoaNhiPhan",

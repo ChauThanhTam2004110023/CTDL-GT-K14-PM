@@ -8,7 +8,7 @@ public class SinhVien {
 
     public SinhVien()
     {
-
+        
     }
 
     Scanner sc = new Scanner(System.in);
@@ -18,21 +18,10 @@ public class SinhVien {
         return tenSinhVien;
     }
 
-    public void settenSinhVien(String tenSinhVien)
-    {
-        this.tenSinhVien = tenSinhVien;
-    }
-
     public double getdiemTB()
     {
         return diemTB;
     }
-
-    public void setdiemTB(double diemTB)
-    {
-        this.diemTB = diemTB;
-    }
-
     public SinhVien(String ten, double diem)
     {
         tenSinhVien = ten;
