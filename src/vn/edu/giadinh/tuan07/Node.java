@@ -12,7 +12,9 @@ public class Node {
     //lien ket den node tiep theo
     Node next;
     public Node()
-    {}
+    {
+        
+    }
 
     public Node(Node d)
     {
@@ -20,12 +22,12 @@ public class Node {
         next = null;
     }
 
-    /* public Node(int di, String ten, double kl)
+    public Node(int di, String ten, double kl)
     {
         id = di;
         tenMau = ten;
         khoiLuong = kl; 
-    } */
+    }
     public Node(Node d, Node n)
     {
         data = d;
