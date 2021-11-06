@@ -99,8 +99,7 @@ public class LinkedList {
             {
                 System.out.println("Táo đã xóa : ");
                 current.inThongTin();
-                current = tail;
-                tail.next = null;
+                head = head.next;
                 current = current.next;
             }
         }
