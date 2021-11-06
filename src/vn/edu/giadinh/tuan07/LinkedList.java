@@ -25,12 +25,12 @@ public class LinkedList {
             String tenMau = sc.nextLine();
             System.out.println("Nhap khoi luông: ");
             double khoiLuong = sc.nextDouble(); 
-            add();
+            add(id, tenMau, khoiLuong);
         }
     }
-    public void add()
+    public void add(int di, String ten, double kl)
     {
-        Node newNode = new Node();
+        Node newNode = new Node(di, ten, kl);
         if(head == null)
         {
             head = newNode;
@@ -55,4 +55,66 @@ public class LinkedList {
             current = current.next;
         }
     }   
+
+    public void timKiemDauDS()
+    {
+        Node current = head;
+        System.out.println("Nhâp ma tao muon tim: ");
+        int n = sc.nextInt();
+        while(current != null)
+        {
+            if(current.id == n)
+            {
+                System.out.println("Tao muon tim: ");
+                current.inThongTin();
+                current = current.next;
+            }
+        }
+    }
+
+    public void timKiemCuoiDS()
+    {
+        Node current = tail;
+        System.out.println("Nhap ma tao muon tim: ");
+        int n = sc.nextInt();
+        while(current != null)
+        {
+            if(current.id == n)
+            {
+                System.out.println("Tao muon tim la: ");
+                current.inThongTin();
+                current = current.next;
+            }
+        }
+    }
+
+    public void xoaDauDS()
+    {
+        Node current = head;
+        //Node current = tail;
+        System.out.println("Tao can xoa: ");
+        int n = sc.nextInt();
+        while(current != null)
+        {
+            if(current.next == tail)
+            {
+                current = tail;
+                tail.next = null;
+                current = current.next;
+            }
+        }
+    }
+
+    public void xoaCuoiDS()
+    {
+        Node current = tail;
+        System.out.println("Tao can xoa: ");
+        int n = sc.nextInt();
+        while(current.next == head)
+        {
+            current = head;
+            head.next = null;
+            current = current.next;
+        }
+    }
 }
