@@ -56,10 +56,25 @@ public class LinkedList {
         }
     }   
 
+    public void tim()
+    {
+        Node current = head;
+        if(head == null)
+        {
+            System.out.println("Danh sach rong");
+            return;
+        }
+        while(current != null)
+        {
+            current.inThongTin();
+            current = current.next;
+        }
+    }
+
     public void timKiemDauDS()
     {
         Node current = head;
-        System.out.println("Nhâp ma tao muon tim: ");
+        System.out.println("Nhâp ma tao muon tim");
         int n = sc.nextInt();
         while(current != null)
         {
@@ -67,54 +82,27 @@ public class LinkedList {
             {
                 System.out.println("Tao muon tim: ");
                 current.inThongTin();
-                current = current.next;
+                current = current.next; 
+                sc.nextLine();
             }
         }
     }
-
-    public void timKiemCuoiDS()
-    {
-        Node current = tail;
-        System.out.println("Nhap ma tao muon tim: ");
-        int n = sc.nextInt();
-        while(current != null)
-        {
-            if(current.id == n)
-            {
-                System.out.println("Tao muon tim la: ");
-                current.inThongTin();
-                current = current.next;
-            }
-        }
-    }
-
     public void xoaDauDS()
     {
         Node current = head;
         //Node current = tail;
-        System.out.println("Tao can xoa: ");
+        System.out.println("Nhap id can xoa: ");
         int n = sc.nextInt();
         while(current != null)
         {
             if(current.next == tail)
             {
+                System.out.println("Táo đã xóa : ");
+                current.inThongTin();
                 current = tail;
                 tail.next = null;
                 current = current.next;
             }
-        }
-    }
-
-    public void xoaCuoiDS()
-    {
-        Node current = tail;
-        System.out.println("Tao can xoa: ");
-        int n = sc.nextInt();
-        while(current.next == head)
-        {
-            current = head;
-            head.next = null;
-            current = current.next;
         }
     }
 }

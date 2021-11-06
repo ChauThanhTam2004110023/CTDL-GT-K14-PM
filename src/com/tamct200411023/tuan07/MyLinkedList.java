@@ -1,53 +1,92 @@
 package com.tamct200411023.tuan07;
 
+import java.util.Scanner;
+
 public class MyLinkedList {
-    //Head la 
     Node head = null;
     Node tail = null;
-
-    public MyLinkedList(){}
-
-    void add(int data)
+    Scanner sc = new Scanner(System.in);
+    
+    public MyLinkedList()
     {
-        Node newNode = new Node(data);
+
+    }
+
+    public void nhapDanhSach()
+    {
+        head = null;
+        tail = null;
+        System.out.println("Nhap so luong can nhap: ");
+        int n = sc.nextInt();
+        for(int i = 0; i < n; i++)
+        {
+            System.out.println("Nhap ten mau: ");
+            String tenMau = sc.nextLine();
+            sc.nextLine();
+            System.out.println("Nhap id: ");
+            int id = sc.nextInt();
+            System.out.println("Nhap khoi luong: ");
+            double khoiLuong = sc.nextDouble();
+            xuatDanhSach(tenMau, id, khoiLuong);
+        }
+    }
+
+    public void xuatDanhSach(String ten, int di, double kl)
+    {
+        Node newNode = new Node(ten, di, kl);
         if(head == null)
         {
-            //Dai dien cho nut dau va cuo ds, cung lien ket 
             head = newNode;
             tail = newNode;
         }
         else
         {
-            //tro den newNode
             tail.next = newNode;
             tail = newNode;
         }
     }
-    void remove(){
 
-    }
-
-    void print()
+    public void inDanhSach()
     {
         Node current = head;
-
         if(head == null)
         {
-            System.out.println("Danh Sach rong!!");
-            return;
+            System.out.println("Danh sach rông");
         }
-
-        System.err.println("Cac nut trong danh sach ");
         while(current != null)
         {
-            System.out.println(current.data);
+            current.inThongTin();
             current = current.next;
         }
     }
 
-    void find(){
-      
-
+    public void timKiemDauDS()
+    {
+        Node current = head;
+        System.out.println("Nhap id muon tin la: ");
+        int n = sc.nextInt();
+        while(current != null)
+        {
+            if(current.id == n)
+            {
+                System.out.println("Tao muon tim la: ");
+                current.inThongTin();
+                current = current.next;
+            }
+        }
+        sc.nextLine();
     }
 
+    public void xoaDauDS()
+    {
+        Node current = head;
+        System.out.println("Tao can xoa: ");
+        String n = sc.nextLine();
+        while(current.next == tail)
+        {
+            current = tail;
+            tail.next = null;
+            current = current.next;
+        }
+    }
 }
