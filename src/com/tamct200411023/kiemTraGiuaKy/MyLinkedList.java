@@ -9,15 +9,15 @@ public class MyLinkedList {
  
      void add(String data)
      {
-         Node newNode = new Node(data);
-         if(head == null)
-         {
-             //Dai dien cho nut dau va cuo ds, cung lien ket 
-             head = newNode;
-             tail = newNode;
-         }
-         else
-         {
+        Node newNode = new Node(data);
+        if(head == null)
+        {
+            //Dai dien cho nut dau va cuo ds, cung lien ket 
+            head = newNode;
+            tail = newNode;
+        }
+        else
+        {
              //tro den newNode
              tail.next = newNode;
              tail = newNode;

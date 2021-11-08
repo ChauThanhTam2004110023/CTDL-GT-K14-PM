@@ -1,36 +1,37 @@
-package vn.edu.giadinh.tuan07;
+package com.tamct200411023.kiemtragiuakylan2;
 
 import java.util.Scanner;
 
-public class LinkedList {
+public class DSLK {
     Node head = null;
     Node tail = null;
     Node current = null;
     Scanner sc = new Scanner(System.in);
-    public LinkedList()
+    public DSLK()
     {
 
     }
+
     public void nhapThongTin()
     {
-        
-        System.out.println("Nhap so luong tao can nhap: ");
+        System.out.println("Nhập số lượng cần nhập: ");
         int n = sc.nextInt();
-        for(int i = 0; i < n ;i++)
+        for(int i = 0; i < n; i++)
         {
-            System.out.println("Nhap id: ");
-            int id = sc.nextInt();
+            System.out.println("Nhap sách: ");
+            String sach = sc.nextLine();
             sc.nextLine();
-            System.out.println("Nhap ten mau: ");
-            String tenMau = sc.nextLine();
-            System.out.println("Nhap khoi luông: ");
-            double khoiLuong = sc.nextDouble(); 
-            add(id, tenMau, khoiLuong);
+            System.out.println("Nhập id: ");
+            int id = sc.nextInt();
+            System.out.println("Nhập số lượng: ");
+            double soLuong = sc.nextDouble();
+            add(id, sach, soLuong);
         }
     }
-    public void add(int di, String ten, double kl)
+
+    public void add(int di, String tensach, double sl)
     {
-        Node newNode = new Node(di, ten, kl);
+        Node newNode = new Node(di, tensach, sl);
         if(head == null)
         {
             head = newNode;
@@ -41,13 +42,14 @@ public class LinkedList {
             tail.next = newNode;
             tail = newNode;
         }
-    } 
+    }
+
     public void inDanhSach()
     {
-         current = head;
+        current = head;
         if(head == null)
         {
-            System.out.println("Danh Sach rong");
+            System.out.println("Danh sach rong");
             return;
         }
         while(current != null)
@@ -56,8 +58,7 @@ public class LinkedList {
             System.out.println();
             current = current.next;
         }
-    }   
-
+    }
     public void tim()
     {
         current = head;
@@ -77,13 +78,13 @@ public class LinkedList {
     public void timKiemDauDS()
     {
         current = head;
-        System.out.println("Nhâp ma tao muon tim");
+        System.out.println("Nhap id muon tim");
         int n = sc.nextInt();
         while(current != null)
         {
             if(current.id == n)
             {
-                System.out.println("Tao muon tim: ");
+                System.out.println("Sách muốn tim: ");
                 current.inThongTin();
                 sc.nextLine();
             }
@@ -92,23 +93,23 @@ public class LinkedList {
         System.out.println();
     }
 
-    public void xoaDauDS() //3 Node
+    public void xoaDauDS()
     {
-       head=head.next;
+        head = head.next;
     }
-    void xoaDuoiDS()
+
+    public void xoaCuoiDS()
     {
         current = head;
-        while(current!=null)
-        {   
+        while(current != null)
+        {
             if(current.next == tail)
             {
-                return;
+                tail = current;
+                current.next = null;
             }
-           current = current.next;
+            current = current.next;
         }
-        tail = current;
-        current.next = null;
     }
-    
+
 }

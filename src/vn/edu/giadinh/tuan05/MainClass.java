@@ -18,6 +18,15 @@ public class MainClass {
         String name = sc.nextLine();
         ql.timKiem(name);
         System.out.println("Thong tin sinh vien: " +name+ ": ");
-        ql.timKiem(name);
+        ql.timKiem(name); 
+
+        /* System.out.println("----Menu-----");
+        System.out.println("Nhap Danh Sach");
+        System.out.println("In danh sach");
+        System.out.println("Tim");
+        System.out.println("Tim kiem dau danh sach");
+        System.out.println("Xoa cuoi danh sach");
+        String n = sc.nextLine(); */
     }
 }
+

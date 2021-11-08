@@ -2,10 +2,11 @@ package com.tamct200411023.kiemTraGiuaKy;
 
 import java.util.Scanner;
 
-
-
 public class Apple {
     Scanner sc = new Scanner(System.in);
+    Node data;
+    Node next;
+    
     int id;
     String mauSac;
     double khoiLuong;
@@ -22,7 +23,7 @@ public class Apple {
         this.khoiLuong = kl;
     }
 
-    /* public int getid()
+    public int getid()
     {
         return id;
     }
@@ -34,7 +35,7 @@ public class Apple {
     public double khoiLuong()
     {
         return khoiLuong;
-    } */
+    } 
 
     public void inThongTin()
     {
@@ -43,17 +44,17 @@ public class Apple {
         System.out.println("\tNhap khoi luong: " +khoiLuong);
     }
 
-    /* public void nhapThongTin()
+    public void nhapThongTin()
     {
         System.out.println("Mau sac: ");
-        id = sc.nextInt();
-        System.out.println("Id: ");
         mauSac = sc.nextLine();
+        System.out.println("Id: ");
+        id = sc.nextInt();
         System.out.println("Khoi luong: ");
         khoiLuong = sc.nextDouble();
-    } */
+    }
 
-    public boolean equals(Apple other)
+    /* public boolean equals(Apple other)
     {
         boolean match = true;
         if(mauSac.equals(other.mauSac))
@@ -65,5 +66,5 @@ public class Apple {
             match = false;
         }
         return match;
-    }
+    } */
 }

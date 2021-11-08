@@ -3,57 +3,45 @@ package com.tamct200411023.kiemTraGiuaKy;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-
 public class ArrayListApple {
-    private ArrayList<Apple> list = new ArrayList<>();
+    static ArrayList<Apple> list = new ArrayList<>();
+    static Scanner sc = new Scanner(System.in);
 
-    Scanner sc = new Scanner(System.in);
-   /* public ArrayListApple()
+    static void themAp(Apple apple)
     {
-        dsApple = new ArrayList<>();
+        list.add(apple);
     }
 
-    public void themap(Apple ap)
+    static void nhapDanhSach(Scanner sc)
     {
-        dsApple.add(ap);
-    } */
-
-    public void nhapDanhSach()
-    {
-        Apple ap;
-        System.out.println("Nhap tao: ");
+        Apple apple;
+        System.out.println("Nhap so luong tao can nhap: ");
         int n = sc.nextInt();
-        while(true)
+        for(int i = 0; i < n; i++)
         {
-        for(int i = 0 ; i < n; i++)
-        {
-            System.out.println("Tao thu: " +(i+1)+ ": ");
-            ap = new Apple();
-            ap.inThongTin();
-            list.add(ap);
-        }
-    }
-}
-    public void hienThiDanhSach()
-    {
-        for(Apple ap : list)
-        {
-            ap.inThongTin();
+            System.out.println("Tao thu: " +i+1+ ": ");
+            apple = new Apple();
+            apple.nhapThongTin();
+            themAp(apple);
         }
     }
 
-
-    public static Apple timKiemTheoTen(String mau, ArrayList<Apple> dApples)
+    static void hienThiDanhSach()
     {
-        Apple result = null;
-        for(Apple apple: dApples)
+        for(Apple apple: list)
         {
-            if(apple.mauSac.equals(mau))
+            apple.inThongTin();
+        }
+    }
+
+    static void timKiemTheoTen(String name)
+    {
+        for(Apple apple: list)
+        {
+            if(name.equals(apple.getmauSac()));
             {
-                result = apple;
+                apple.inThongTin();
             }
         }
-        return result;
     }
 }
