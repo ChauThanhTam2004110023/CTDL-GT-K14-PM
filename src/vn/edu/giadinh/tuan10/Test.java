@@ -3,13 +3,49 @@ package vn.edu.giadinh.tuan10;
 import java.util.Scanner;
 
 public class Test {
-    static MyQuanLyKhoHang ql = new MyQuanLyKhoHang();
-    static Scanner sc = new Scanner(System.in);
+        static MyQuanLyKhoHang ql = new MyQuanLyKhoHang();
+        static Scanner sc = new Scanner(System.in);
+        
+    public static void main(String[] args) {
+        in();
+    }
 
+    static void in()
+    {
+        System.out.println("Vang, 10, 10, 2021");
+        System.out.println("Trang, 20, 20, 2022");
+        System.out.println("Tim, 30, 30, 2023");
+        System.out.println("Den, 40, 40, 2024");
+        int n = sc.nextInt();
+        switch(n)
+        {
+            case 1: inThongTin(); break;
+            case 2: tangDan(); break;
+            case 3: giamDan(); break;
+        }
+    }
+
+    static void inThongTin()
+    {
+        ql.inDS();
+        in();
+    }
+    static void tangDan()
+    {
+        ql.tangDan();
+        in();
+    }
+    static void giamDan()
+    {
+        ql.giamDan();
+        in();
+    }
+
+    /* static MyQuanLyKhoHang ql = new MyQuanLyKhoHang();
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         menu();
     }
-
     static void menu()
     {
         System.out.println("----------MENU----------");
@@ -19,19 +55,19 @@ public class Test {
         System.out.println("4.Thêm vào đầu danh sách");
         System.out.println("5.Xóa hàng");
         System.out.println("6.Sửa hàng");
+        System.out.println("7.Tăng dần");
+        System.out.println("8.Giảm dần");
         int n = sc.nextInt();
-        /* System.out.println("vang, 10, 10, 2021");
-        System.out.println("trang, 20, 20, 2022");
-        System.out.println("den, 40, 40, 2023");
-        System.out.println("nau, 50, 50, 2023"); */
         switch(n)
         {
             case 1: themHang(); break;
             case 2: inThongTin(); break;
             case 3: tim(); break;
-            case 4: themHangTruocHang(); break;
-            case 5: xoaDS();
-            case 6: suaDS();
+            case 4: themDangTruoc(); break;
+            case 5: xoaDS(); break;
+            case 6: suaDS(); break;
+            case 7: tangDan(); break;
+            case 8: giamDan(); break;
             default: 
             {
                 System.out.println("Du lieu khong dung");
@@ -45,12 +81,12 @@ public class Test {
         System.out.println("Nhan enter de tiep tuc");
         sc.nextLine();
     }
-    /* static void nhapThongTin()
+    static void nhapThongTin()
     {
         ql.nhapThongTin();
         nhanEnterDeTiepTuc(); 
         menu();
-    } */
+    }
     static void themHang()
     {
         while(true)
@@ -67,7 +103,7 @@ public class Test {
     }
     static void inThongTin()
     {
-        ql.inDanhSach();
+        ql.inDS();
         nhanEnterDeTiepTuc();
         menu();
     }
@@ -75,21 +111,21 @@ public class Test {
     {
         System.out.println("Nhap ten hang can tim: ");
         String tenHangHoa = sc.nextLine();
-        ql.timXongRoiIn(tenHangHoa);
+        ql.timXongInthongTin(tenHangHoa);
         nhanEnterDeTiepTuc();
         menu();
     }
-    static void themHangTruocHang()
+    static void themDangTruoc()
     {
         System.out.println("Nhap ten hang can them: ");
         String tenHangHoa = sc.nextLine();
-        ql.timHangRoiThemVaoDangTruoc(tenHangHoa);
+        ql.timRoiThemVaoDangTruoc(tenHangHoa);
         nhanEnterDeTiepTuc();
         menu();
     }
     static void xoaDS()
     {
-        System.out.println("Nhap ma can xoa: ");
+        System.out.println("Nhập tên hàng cần xóa: ");
         String tenHangHoa = sc.nextLine();
         ql.xoaDS(tenHangHoa);
         nhanEnterDeTiepTuc();
@@ -97,10 +133,24 @@ public class Test {
     }
     static void suaDS()
     {
-        System.out.println("Nhập tên hàng cần sửa: ");
+        System.out.println("Nhập hàng cần sửa: ");
         String tenHangHoa = sc.nextLine();
         ql.suaDS(tenHangHoa);
         nhanEnterDeTiepTuc();
         menu();
     }
+
+    static void tangDan()
+    {
+        ql.tangDan();
+        nhanEnterDeTiepTuc();
+        menu();
+    }
+    static void giamDan()
+    {
+        ql.giamDan();
+        nhanEnterDeTiepTuc();
+        menu();
+    } */
 }
+

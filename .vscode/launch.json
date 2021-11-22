@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Launch Test",
             "request": "launch",
+            "mainClass": "vn.edu.giadinh.tuan08.Test",
+            "projectName": "CTDL-GT-K14-PM_a91ff658"
+        },
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
             "mainClass": "vn.edu.giadinh.tuan10.Test",
             "projectName": "CTDL-GT-K14-PM_a91ff658"
         },
