@@ -3,45 +3,7 @@ package vn.edu.giadinh.tuan10;
 import java.util.Scanner;
 
 public class Test {
-        static MyQuanLyKhoHang ql = new MyQuanLyKhoHang();
-        static Scanner sc = new Scanner(System.in);
-        
-    public static void main(String[] args) {
-        in();
-    }
-
-    static void in()
-    {
-        System.out.println("Vang, 10, 10, 2021");
-        System.out.println("Trang, 20, 20, 2022");
-        System.out.println("Tim, 30, 30, 2023");
-        System.out.println("Den, 40, 40, 2024");
-        int n = sc.nextInt();
-        switch(n)
-        {
-            case 1: inThongTin(); break;
-            case 2: tangDan(); break;
-            case 3: giamDan(); break;
-        }
-    }
-
-    static void inThongTin()
-    {
-        ql.inDS();
-        in();
-    }
-    static void tangDan()
-    {
-        ql.tangDan();
-        in();
-    }
-    static void giamDan()
-    {
-        ql.giamDan();
-        in();
-    }
-
-    /* static MyQuanLyKhoHang ql = new MyQuanLyKhoHang();
+      static MyQuanLyKhoHang ql = new MyQuanLyKhoHang();
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         menu();
@@ -151,6 +113,6 @@ public class Test {
         ql.giamDan();
         nhanEnterDeTiepTuc();
         menu();
-    } */
+    }
 }
 

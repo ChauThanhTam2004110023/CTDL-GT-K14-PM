@@ -17,10 +17,6 @@ public class MyQuanLyKhoHang {
     Scanner sc = new Scanner(System.in);
     Node nhapThongTin()
     {
-        /* System.out.println("Vang, 10, 10, 2021");
-        System.out.println("Trang, 20, 20, 2022");
-        System.out.println("Tim, 30, 30, 2023");
-        System.out.println("Den, 40, 40, 2024");*/
         System.out.println("Nhập tên hàng hóa: ");
         String tenHangHoa = sc.nextLine();
         sc.nextLine();
