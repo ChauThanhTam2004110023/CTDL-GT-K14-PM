@@ -3,47 +3,53 @@ package vn.edu.giadinh.tuan10;
 import java.util.Scanner;
 
 public class MyQuanLyKhoHang {
-
     public MyQuanLyKhoHang()
     {
-        
+
     }
     Node head = null;
     Node tail = null;
     Node current = null;
     Node previous;
+    Node snap;
+    Node full;
+    Node temp;
     Scanner sc = new Scanner(System.in);
     Node nhapThongTin()
     {
+        /* System.out.println("Vang, 10, 10, 2021");
+        System.out.println("Trang, 20, 20, 2022");
+        System.out.println("Tim, 30, 30, 2023");
+        System.out.println("Den, 40, 40, 2024");*/
         System.out.println("Nhập tên hàng hóa: ");
         String tenHangHoa = sc.nextLine();
         sc.nextLine();
-        System.out.println("Nhập giá: ");
+        System.out.println("Nhập giá nhập: ");
         double giaNhap = sc.nextDouble();
-        System.out.println("Nhập số lượng tồn kho: ");
+        System.out.println("Nhap số lượng tồn kho: ");
         double soLuongTonKho = sc.nextDouble();
         System.out.println("Ngày nhập kho: ");
         int ngayNhapKho = sc.nextInt();
-        Node node = new Node(tenHangHoa, giaNhap, soLuongTonKho, ngayNhapKho);
+        Node node = new Node(tenHangHoa, giaNhap, soLuongTonKho, ngayNhapKho); 
         return node;
     }
-    
+
     void add()
     {
-        Node node = nhapThongTin();
+        Node newNode = nhapThongTin();
         if(head == null)
         {
-            head = node;
-            tail = node;
+            head = newNode;
+            tail = newNode;
         }
         else
         {
-            tail.next = node;
-            tail = node;
+            tail.next = newNode;
+            tail = newNode;
         }
     }
 
-    void inDanhSach()
+    void inDS()
     {
         Node current = head;
         if(head == null)
@@ -51,7 +57,7 @@ public class MyQuanLyKhoHang {
             System.out.println("Không có kết quả cần tim");
             return;
         }
-        System.out.println("Kết quả cần tìm la: ");
+        System.out.println("Kết quả cần tìm là: ");
         while(current != null)
         {
             current.inThongTin();
@@ -75,7 +81,7 @@ public class MyQuanLyKhoHang {
         return result;
     }
 
-    void timXongRoiIn(String tenHangHoa)
+    void timXongInthongTin(String tenHangHoa)
     {
         if(true == tim(tenHangHoa))
         {
@@ -83,40 +89,15 @@ public class MyQuanLyKhoHang {
         }
         else
         {
-            System.out.println("Khong tim thay");
+            System.out.println("Khong tìm thấy");
         }
     }
 
-    /* void timKiemDauDS()
+    void themDauDS()
     {
-        previous = head;
-        while(current != null)
-        {
-            if(previous.next == current)
-            {
-                return;
-            }
-            previous = previous.next;
-        }
-    } */
-
-    void timHangRoiThemVaoDangTruoc(String tenHangHoa)
-    {
-        if(true == tim(tenHangHoa))
-        {
-            if(current == head)
-            {
-                addHead();
-            }
-            else
-            {
-                themDangTruoc();
-            }
-        }
-        else
-        {
-            System.out.println("Không tìm thấy");
-        }
+        Node newNode = nhapThongTin();
+        newNode.next = head;
+        head = newNode;
     }
 
     void timDangTruoc()
@@ -135,22 +116,15 @@ public class MyQuanLyKhoHang {
     void themDangTruoc()
     {
         timDangTruoc();
-        Node node = nhapThongTin();
-        previous.next = node;
+        Node newNode = nhapThongTin();
+        previous.next = newNode;
         previous.next.next = current;
     }
 
-    void addHead()
-    {
-        Node node = nhapThongTin();
-        node.next = head;
-        head = node;
-    }
-
-    /* void timDangTruoc()
+    void timKiemDauDS()
     {
         previous = head;
-        while(previous != null)
+        while(current != null)
         {
             if(previous.next == current)
             {
@@ -158,38 +132,28 @@ public class MyQuanLyKhoHang {
             }
             previous = previous.next;
         }
-    } */
+    }
 
-    public void xoaDS(String tenHangHoa)
+    void timRoiThemVaoDangTruoc(String tenHangHoa)
     {
         if(true == tim(tenHangHoa))
         {
-            if(current == head)
-            {
-                xoaDauDS();
-            }
-            else if(current == tail)
-            {
-                xoaCuoiDS();
-            }
-            else
-            {
-                xoaGiuaDS();
-            } 
+            themDangTruoc();
         }
         else
         {
-            System.out.println("Không tìm thấy");
+            themDangTruoc();
         }
     }
 
-    public void xoaDauDS()
+    void xoaHead()
     {
         head = head.next;
     }
 
-    public void xoaCuoiDS()
+    void xoaTail()
     {
+        nhapThongTin();
         current = head;
         while(current != null)
         {
@@ -206,26 +170,93 @@ public class MyQuanLyKhoHang {
         }
     }
 
-    public void xoaGiuaDS()
-    {
-        timDangTruoc();
-        current = current.next;
-        previous.next = current;
-    }
-
-    public void suaDS(String tenHangHoa)
+    void xoaDS(String tenHangHoa)
     {
         if(true == tim(tenHangHoa))
         {
-            Node node = new Node();
-            current.tenHangHoa = node.tenHangHoa;
-            current.giaNhap = node.giaNhap;
-            current.soLuongTonKho = node.soLuongTonKho;
-            current.ngayNhapKho = node.ngayNhapKho;
+            if(current == head)
+            {
+                xoaHead();
+            }
+            else if(current == tail)
+            {
+                xoaTail();
+            }
+        }
+    }
+
+    void suaDS(String tenHangHoa)
+    {
+        if(true == tim(tenHangHoa))
+        {
+            Node newNode = nhapThongTin();
+            current.tenHangHoa = newNode.tenHangHoa;
+            return;
         }
         else
         {
-            System.out.println("Khong tim thay");
+            System.out.println("Không có trong danh sách");
         }
     }
+
+    void thongTin()
+    {
+        temp = new Node();
+        temp.tenHangHoa = snap.tenHangHoa;
+        temp.giaNhap = snap.giaNhap;
+        temp.soLuongTonKho = snap.soLuongTonKho;
+        temp.ngayNhapKho = snap.ngayNhapKho;
+
+        snap.tenHangHoa = current.tenHangHoa;
+        snap.giaNhap = current.giaNhap;
+        snap.soLuongTonKho = current.soLuongTonKho;
+        snap.ngayNhapKho = current.ngayNhapKho;
+
+        current.tenHangHoa = temp.tenHangHoa;
+        current.giaNhap = temp.giaNhap;
+        current.soLuongTonKho = current.soLuongTonKho;
+        current.ngayNhapKho = current.ngayNhapKho;
+    }
+
+    void tangDan()
+    {
+        inDS();
+        current = head;
+        while(current != null)
+        {
+            full = current;
+            snap = current;
+            while(full != null)
+            {
+                if(full.giaNhap < snap.giaNhap)
+                {
+                    snap = full;
+                }
+                full = full.next;
+            }
+            thongTin();
+            current = current.next;
+        }
+    }
+
+   void giamDan()
+   {
+       inDS();
+       current = head;
+       while(current != null)
+       {
+           full = current;
+           snap = current;
+           while(full != null)
+           {
+               if(full.giaNhap > snap.giaNhap)
+               {
+                   snap = full;
+               }
+               full = full.next;
+           }
+           thongTin();
+           current = current.next;
+       }
+   }
 }
