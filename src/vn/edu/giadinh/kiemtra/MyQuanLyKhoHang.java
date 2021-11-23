@@ -5,55 +5,55 @@ import java.util.Scanner;
 public class MyQuanLyKhoHang {
     public MyQuanLyKhoHang()
     {
-        
+
     }
     Node head = null;
     Node tail = null;
-    Node current = null;
-    Node previous = null;
+    Node current;
+    Node previous;
     Scanner sc = new Scanner(System.in);
-    Node nhapThongTin()
+
+    void nhapThongTin()
     {
         System.out.println("Nhập tên hàng hóa: ");
         String tenHangHoa = sc.nextLine();
         sc.nextLine();
-        System.out.println("Nhập giá: ");
+        System.out.println("Nhập giá nhập: ");
         double giaNhap = sc.nextDouble();
-        System.out.println("Nhập số lượng tồn kho: ");
+        System.out.println("Nhap số lượng tồn kho: ");
         double soLuongTonKho = sc.nextDouble();
         System.out.println("Ngày nhập kho: ");
         int ngayNhapKho = sc.nextInt();
-        Node node = new Node(tenHangHoa, giaNhap, soLuongTonKho, ngayNhapKho);
-        return node;
+        add(tenHangHoa, giaNhap, soLuongTonKho, ngayNhapKho);
     }
 
-    void add()
+    void add(String ten, double gia, double sl, int ngay)
     {
-        Node node = nhapThongTin();
+        Node newNode = new Node(ten, gia, sl, ngay);
         if(head == null)
         {
-            head = node;
-            tail = node;
+            head = newNode;
+            tail = newNode;
         }
         else
         {
-            tail.next = node;
-            tail = node;
+            tail.next = newNode;
+            tail = newNode;
         }
     }
 
     void inDanhSach()
     {
-        Node current = head;
+        current = head;
         if(head == null)
         {
-            System.out.println("Không có kết quả cần tim");
+            System.out.println("Danh sách rỗng");
             return;
         }
-        System.out.println("Kết quả cần tìm la: ");
         while(current != null)
         {
             current.inThongTin();
+            System.out.println();
             current = current.next;
         }
     }
@@ -74,7 +74,7 @@ public class MyQuanLyKhoHang {
         return result;
     }
 
-    void timXongRoiIn(String tenHangHoa)
+    void timRoiIn(String tenHangHoa)
     {
         if(true == tim(tenHangHoa))
         {
@@ -82,39 +82,7 @@ public class MyQuanLyKhoHang {
         }
         else
         {
-            System.out.println("Khong tim thay");
-        }
-    }
-
-    void timKiemDauDS()
-    {
-        previous = head;
-        while(current != null)
-        {
-            if(previous.next == current)
-            {
-                return;
-            }
-            previous = previous.next;
-        }
-    }
-
-    void timHangRoiThemVaoDangTruoc(String tenHangHoa)
-    {
-        if(true == tim(tenHangHoa))
-        {
-            if(current == head)
-            {
-                addHead();
-            }
-            else
-            {
-                themDangTruoc();
-            }
-        }
-        else
-        {
-            System.out.println("Không tìm thấy");
+            System.out.println("Không có tron danh sách");
         }
     }
 
@@ -128,100 +96,6 @@ public class MyQuanLyKhoHang {
                 return;
             }
             previous = previous.next;
-        }
-    }
-
-    void themDangTruoc()
-    {
-        timDangTruoc();
-        Node node = nhapThongTin();
-        previous.next = node;
-        previous.next.next = current;
-    }
-
-    void addHead()
-    {
-        Node node = nhapThongTin();
-        node.next = head;
-        head = node;
-    }
-
-    /* void timDangTruoc()
-    {
-        previous = head;
-        while(previous != null)
-        {
-            if(previous.next == current)
-            {
-                return;
-            }
-            previous = previous.next;
-        }
-    } */
-
-    public void xoaDS(String tenHangHoa)
-    {
-        if(true == tim(tenHangHoa))
-        {
-            if(current == head)
-            {
-                xoaDauDS();
-            }
-            else if(current == tail)
-            {
-                xoaCuoiDS();
-            }
-            else
-            {
-                xoaGiuaDS();
-            } 
-        }
-        else
-        {
-            System.out.println("Không tìm thấy");
-        }
-    }
-
-    public void xoaDauDS()
-    {
-        head = head.next;
-    }
-
-    public void xoaCuoiDS()
-    {
-        current = head;
-        while(current != null)
-        {
-            if(current != null)
-            {
-                if(current.next == tail)
-                {
-                    tail = current;
-                    current.next = null;
-                    return;
-                }
-                current = current.next;
-            }
-        }
-    }
-
-    public void xoaGiuaDS()
-    {
-        timDangTruoc();
-        current = current.next;
-        previous.next = current;
-    }
-
-    public void suaDS(String tenHangHoa)
-    {
-        if(true == tim(tenHangHoa))
-        {
-            Node node = nhapThongTin();
-            current.tenHangHoa = node.tenHangHoa;
-        }
-        else
-        {
-            System.out.println("Khong tim thay");
         }
     }
 }

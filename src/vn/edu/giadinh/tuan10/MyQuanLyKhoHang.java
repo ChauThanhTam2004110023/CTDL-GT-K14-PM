@@ -134,12 +134,31 @@ public class MyQuanLyKhoHang {
     {
         if(true == tim(tenHangHoa))
         {
-            themDangTruoc();
+            themDauDS();
         }
         else
         {
             themDangTruoc();
         }
+    }
+
+    void xoa(String tenHangHoa)
+    {
+        if(current == head)
+        {
+            xoaHead();
+            return;
+        }
+        if(current == tail)
+        {
+            xoaTail();
+            return;
+        }
+        else
+        {
+            System.out.println("Không tìm thấy để xóa");
+        }
+        previous.next = previous.next;
     }
 
     void xoaHead()
@@ -165,6 +184,8 @@ public class MyQuanLyKhoHang {
             }
         }
     }
+
+    
 
     void xoaDS(String tenHangHoa)
     {
