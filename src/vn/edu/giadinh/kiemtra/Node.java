@@ -2,8 +2,8 @@ package vn.edu.giadinh.kiemtra;
 
 public class Node {
     String tenHangHoa;
-    double giaNhap;
-    double soLuongTonKho;
+    int giaNhap;
+    int soLuongTonKho;
     int ngayNhapKho;
 
     Node next;
@@ -13,7 +13,7 @@ public class Node {
 
     }
 
-    public Node(String ten, double gia, double sl, int ngay)
+    public Node(String ten, int gia, int sl, int ngay)
     {
         tenHangHoa = ten;
         giaNhap = gia;

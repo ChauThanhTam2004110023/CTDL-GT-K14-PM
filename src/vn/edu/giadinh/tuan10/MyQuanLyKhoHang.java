@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class MyQuanLyKhoHang {
     public MyQuanLyKhoHang()
     {
-
     }
+
+  
     Node head = null;
     Node tail = null;
     Node current = null;
@@ -15,21 +16,23 @@ public class MyQuanLyKhoHang {
     Node full;
     Node temp;
     Scanner sc = new Scanner(System.in);
+
     Node nhapThongTin()
     {
         System.out.println("Nhập tên hàng hóa: ");
         String tenHangHoa = sc.nextLine();
         sc.nextLine();
         System.out.println("Nhập giá nhập: ");
-        double giaNhap = sc.nextDouble();
+        int giaNhap = sc.nextInt();
         System.out.println("Nhap số lượng tồn kho: ");
-        double soLuongTonKho = sc.nextDouble();
+        int soLuongTonKho = sc.nextInt();
         System.out.println("Ngày nhập kho: ");
         int ngayNhapKho = sc.nextInt();
         Node node = new Node(tenHangHoa, giaNhap, soLuongTonKho, ngayNhapKho); 
         return node;
     }
 
+   
     void add()
     {
         Node newNode = nhapThongTin();

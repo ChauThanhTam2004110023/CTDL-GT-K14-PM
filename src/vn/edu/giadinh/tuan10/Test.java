@@ -3,7 +3,7 @@ package vn.edu.giadinh.tuan10;
 import java.util.Scanner;
 
 public class Test {
-      static MyQuanLyKhoHang ql = new MyQuanLyKhoHang();
+    static MyQuanLyKhoHang ql = new MyQuanLyKhoHang();
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         menu();
