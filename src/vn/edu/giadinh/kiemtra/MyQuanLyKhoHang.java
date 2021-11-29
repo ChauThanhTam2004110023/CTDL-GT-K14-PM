@@ -5,26 +5,26 @@ import java.util.Scanner;
 public class MyQuanLyKhoHang {
     public MyQuanLyKhoHang()
     {
-       add("Vang", 10, 10, 20-11-2021);
-       add("Tim", 20, 20, 16-10-2021);
-       add("Trang", 30, 30, 15-5-2021);
-       add("Xanh", 40, 40, 6-9-2021);
-       add("Den", 50, 50, 6-6-2021);
-       add("Nau", 60, 60, 16-9-2021);
-       add("Do", 70, 70, 29-5-2021);
-       add("Duong", 80, 80, 30-4-2021);
-       add("Cham", 90, 90, 23-8-2021);
-       add("Luc", 11, 11, 13-2-2021);
-       add("Sac", 12, 12, 12-1-2021);
-       add("Cam", 13, 13, 4-12-2021);
-       add("Huong", 14, 14, 2-3-2021);
-       add("La", 15, 15, 6-8-2021);
-       add("La cam", 16, 16, 6-7-2021);
-       add("Hong", 17, 17, 4-5-2021);
-       add("Tham", 18, 18, 1-12-2021);
-       add("Sen", 20, 20, 12-9-2021);
-       add("Do nhat", 19, 19, 12-6-2021);
-       add("Bac", 21, 21, 8-8-2021);
+       add("Vang", 10, 10, 2021);
+       add("Tim", 20, 20, 2021);
+       add("Trang", 30, 30, 2021);
+       add("Xanh", 40, 40, 2021);
+       add("Den", 50, 50, 2021);
+       add("Nau", 60, 60, 2021);
+       add("Do", 70, 70, 2021);
+       add("Duong", 80, 80, 2021);
+       add("Cham", 90, 90, 2021);
+       add("Luc", 11, 11, 2021);
+       add("Sac", 12, 12, 2021);
+       add("Cam", 13, 13, 2021);
+       add("Huong", 14, 14, 2021);
+       add("La", 15, 15, 2021);
+       add("La cam", 16, 16, 2021);
+       add("Hong", 17, 17, 2021);
+       add("Tham", 18, 18, 2021);
+       add("Sen", 20, 20, 2021);
+       add("Do nhat", 19, 19, 2021);
+       add("Bac", 21, 21, 2021);
 
     }
     Node head = null;
@@ -226,6 +226,8 @@ public class MyQuanLyKhoHang {
             }
         }
     }
+
+    
 
     void xoaDS(String tenHangHoa)
     {
