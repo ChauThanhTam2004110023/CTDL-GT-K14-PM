@@ -5,12 +5,28 @@ import java.util.Scanner;
 public class MyQuanLyKhoHang {
     public MyQuanLyKhoHang()
     {
-       add("Vang", 10, 10, 2020);
-       add("Tim", 20, 20, 2021);
-       add("sen", 30, 30, 2022);
-    }
+       add("Vang", 10, 10, 20-11-2021);
+       add("Tim", 20, 20, 16-10-2021);
+       add("Trang", 30, 30, 15-5-2021);
+       add("Xanh", 40, 40, 6-9-2021);
+       add("Den", 50, 50, 6-6-2021);
+       add("Nau", 60, 60, 16-9-2021);
+       add("Do", 70, 70, 29-5-2021);
+       add("Duong", 80, 80, 30-4-2021);
+       add("Cham", 90, 90, 23-8-2021);
+       add("Luc", 11, 11, 13-2-2021);
+       add("Sac", 12, 12, 12-1-2021);
+       add("Cam", 13, 13, 4-12-2021);
+       add("Huong", 14, 14, 2-3-2021);
+       add("La", 15, 15, 6-8-2021);
+       add("La cam", 16, 16, 6-7-2021);
+       add("Hong", 17, 17, 4-5-2021);
+       add("Tham", 18, 18, 1-12-2021);
+       add("Sen", 20, 20, 12-9-2021);
+       add("Do nhat", 19, 19, 12-6-2021);
+       add("Bac", 21, 21, 8-8-2021);
 
-  
+    }
     Node head = null;
     Node tail = null;
     Node current = null;
@@ -20,14 +36,14 @@ public class MyQuanLyKhoHang {
     Node temp;
     Scanner sc = new Scanner(System.in);
 
-    Node nhapThongTin()
+    Node themHang()
     {
-        System.out.println("Nhập tên hàng hóa: ");
+        System.out.println("Tên hàng hóa: ");
         String tenHangHoa = sc.nextLine();
         sc.nextLine();
-        System.out.println("Nhập giá nhập: ");
+        System.out.println("Giá nhập: ");
         int giaNhap = sc.nextInt();
-        System.out.println("Nhap số lượng tồn kho: ");
+        System.out.println("Số lượng tồn kho: ");
         int soLuongTonKho = sc.nextInt();
         System.out.println("Ngày nhập kho: ");
         int ngayNhapKho = sc.nextInt();
@@ -37,7 +53,7 @@ public class MyQuanLyKhoHang {
 
     void add()
     {
-        Node newNode = nhapThongTin();
+        Node newNode = themHang();
         if(head == null)
         {
             head = newNode;
@@ -49,16 +65,6 @@ public class MyQuanLyKhoHang {
             tail = newNode;
         }
     }
-
-    /* Node nhap()
-    {
-        Node node = new Node("vang", 10, 10, 2020);
-        Node node1 = new Node("trang", 20, 20, 2021);
-        Node node2 = new Node("tim", 30, 30, 2022);
-        Node node3 = new Node("den", 40, 40, 2023);
-        Node node4 = new Node("sen", 50, 50, 2024);
-        return node;
-    } */
 
     void add(String ten, int gia, int sl, int ngay)
     {
@@ -121,7 +127,7 @@ public class MyQuanLyKhoHang {
 
     void themDauDS()
     {
-        Node newNode = nhapThongTin();
+        Node newNode = themHang();
         newNode.next = head;
         head = newNode;
     }
@@ -142,7 +148,7 @@ public class MyQuanLyKhoHang {
     void themDangTruoc()
     {
         timDangTruoc();
-        Node newNode = nhapThongTin();
+        Node newNode = themHang();
         previous.next = newNode;
         previous.next.next = current;
     }
@@ -221,8 +227,6 @@ public class MyQuanLyKhoHang {
         }
     }
 
-    
-
     void xoaDS(String tenHangHoa)
     {
         if(true == tim(tenHangHoa))
@@ -242,7 +246,7 @@ public class MyQuanLyKhoHang {
     {
         if(true == tim(tenHangHoa))
         {
-            Node newNode = nhapThongTin();
+            Node newNode = themHang();
             current.tenHangHoa = newNode.tenHangHoa;
             return;
         }
@@ -267,8 +271,8 @@ public class MyQuanLyKhoHang {
 
         current.tenHangHoa = temp.tenHangHoa;
         current.giaNhap = temp.giaNhap;
-        current.soLuongTonKho = current.soLuongTonKho;
-        current.ngayNhapKho = current.ngayNhapKho;
+        /* current.soLuongTonKho = current.soLuongTonKho;
+        current.ngayNhapKho = current.ngayNhapKho; */
     }
 
     void tangDan()
@@ -277,6 +281,7 @@ public class MyQuanLyKhoHang {
         current = head;
         while(current != null)
         {
+            temp = current;
             full = current;
             snap = current;
             while(full != null)
@@ -298,6 +303,7 @@ public class MyQuanLyKhoHang {
        current = head;
        while(current != null)
        {
+           temp = current;
            full = current;
            snap = current;
            while(full != null)
