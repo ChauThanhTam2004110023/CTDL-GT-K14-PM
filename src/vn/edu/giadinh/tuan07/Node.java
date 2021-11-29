@@ -1,6 +1,5 @@
 package vn.edu.giadinh.tuan07;
 
-import java.util.Scanner;
 
 public class Node {
     
@@ -27,16 +26,5 @@ public class Node {
         System.out.println("\tNhap mau: " +tenMau);
         System.out.println("\tNhap khoi luong: " +khoiLuong);
     }
-    Scanner sc = new Scanner(System.in);
-
-    public void nhapThongTin()
-    {
-        System.out.println("Mau sac: ");
-        id = sc.nextInt();
-        //sc.nextLine();
-        System.out.println("Id: ");
-        tenMau = sc.nextLine();
-        System.out.println("Khoi luong: ");
-        khoiLuong = sc.nextDouble();
-    } 
+   
 }

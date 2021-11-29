@@ -6,7 +6,7 @@ public class TestDrive {
     static MyQuanLyKhoHang ql = new MyQuanLyKhoHang();
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        //menu();
+        menu();
     }
     static void menu()
     {
@@ -45,7 +45,7 @@ public class TestDrive {
     }
     static void nhapThongTin()
     {
-        ql.nhapThongTin();
+        ql.themHang();
         nhanEnterDeTiepTuc(); 
         menu();
     }
