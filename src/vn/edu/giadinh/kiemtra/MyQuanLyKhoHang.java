@@ -3,6 +3,15 @@ package vn.edu.giadinh.kiemtra;
 import java.util.Scanner;
 
 public class MyQuanLyKhoHang {
+    Node head = null;
+    Node tail = null;
+    Node current = null;
+    Node previous = null;
+    Node snap;
+    Node full;
+    Node temp;
+    Scanner sc = new Scanner(System.in);
+
     public MyQuanLyKhoHang()
     {
        add("Vang", 10, 10, 2021);
@@ -25,17 +34,25 @@ public class MyQuanLyKhoHang {
        add("Sen", 20, 20, 2021);
        add("Do nhat", 19, 19, 2021);
        add("Bac", 21, 21, 2021);
-
+       add("Si", 22, 22, 2023);
     }
-    Node head = null;
-    Node tail = null;
-    Node current = null;
-    Node previous;
-    Node snap;
-    Node full;
-    Node temp;
-    Scanner sc = new Scanner(System.in);
 
+    void add(String ten, int gia, int sl, int ngay)
+    {
+        Node node = new Node(ten, gia, sl, ngay);
+        if(head == null)
+        {
+            head = node;
+            tail = node;
+        }
+        else
+        {
+            tail.next = node;
+            tail = node;
+        }
+    }
+
+   
     Node themHang()
     {
         System.out.println("Tên hàng hóa: ");
@@ -66,20 +83,7 @@ public class MyQuanLyKhoHang {
         }
     }
 
-    void add(String ten, int gia, int sl, int ngay)
-    {
-        Node node = new Node(ten, gia, sl, ngay);
-        if(head == null)
-        {
-            head = node;
-            tail = node;
-        }
-        else
-        {
-            tail.next = node;
-            tail = node;
-        }
-    }
+    
 
     void inDS()
     {
@@ -144,7 +148,7 @@ public class MyQuanLyKhoHang {
             previous = previous.next;
         }
     }
-
+   
     void themDangTruoc()
     {
         timDangTruoc();
@@ -190,10 +194,6 @@ public class MyQuanLyKhoHang {
             xoaTail();
             return;
         }
-        else
-        {
-            System.out.println("Không tìm thấy để xóa");
-        }
         previous.next = previous.next;
     }
 
@@ -226,8 +226,6 @@ public class MyQuanLyKhoHang {
             }
         }
     }
-
-    
 
     void xoaDS(String tenHangHoa)
     {
@@ -285,7 +283,6 @@ public class MyQuanLyKhoHang {
         {
             temp = current;
             full = current;
-            snap = current;
             while(full != null)
             {
                 if(full.giaNhap < snap.giaNhap)
@@ -307,7 +304,6 @@ public class MyQuanLyKhoHang {
        {
            temp = current;
            full = current;
-           snap = current;
            while(full != null)
            {
                if(full.giaNhap > snap.giaNhap)

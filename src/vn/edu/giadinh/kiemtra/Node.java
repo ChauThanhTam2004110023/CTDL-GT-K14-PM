@@ -5,7 +5,6 @@ public class Node {
     int giaNhap;
     int soLuongTonKho;
     int ngayNhapKho;
-
     Node next;
 
     public Node()
