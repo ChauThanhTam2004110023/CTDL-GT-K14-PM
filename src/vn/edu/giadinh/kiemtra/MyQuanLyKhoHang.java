@@ -3,10 +3,10 @@ package vn.edu.giadinh.kiemtra;
 import java.util.Scanner;
 
 public class MyQuanLyKhoHang {
-    Node head = null;
-    Node tail = null;
-    Node current = null;
-    Node previous = null;
+    Node head;
+    Node tail;
+    Node current;
+    Node previous;
     Node snap;
     Node full;
     Node temp;
@@ -35,24 +35,25 @@ public class MyQuanLyKhoHang {
        add("Do nhat", 19, 19, 2021);
        add("Bac", 21, 21, 2021);
        add("Si", 22, 22, 2023);
+       
     }
 
     void add(String ten, int gia, int sl, int ngay)
     {
-        Node node = new Node(ten, gia, sl, ngay);
+        Node newNode = new Node(ten, gia, sl, ngay);
         if(head == null)
         {
-            head = node;
-            tail = node;
+            head = newNode;
+            tail = newNode;
         }
         else
         {
-            tail.next = node;
-            tail = node;
+            tail.next = newNode;
+            tail = newNode;
         }
     }
 
-   
+
     Node themHang()
     {
         System.out.println("Tên hàng hóa: ");
@@ -195,12 +196,12 @@ public class MyQuanLyKhoHang {
             return;
         }
         previous.next = previous.next;
-    }
+    } 
 
     void xoaHead()
     {
         current = head;
-        if(head != null)
+        if(head == null)
         {
             System.out.println("Khong co trong danh sach");
             return;
@@ -242,12 +243,15 @@ public class MyQuanLyKhoHang {
         }
     }
 
-    void suaDS(String tenHangHoa)
+    void suaDS(String tenHangHoa, int giaNhap, int soLuongTonKho, int ngayNhapKho)
     {
         if(true == tim(tenHangHoa))
         {
             Node newNode = themHang();
             current.tenHangHoa = newNode.tenHangHoa;
+            current.giaNhap = newNode.giaNhap;
+            current.soLuongTonKho = newNode.soLuongTonKho;
+            current.ngayNhapKho = newNode.ngayNhapKho;
             return;
         }
         else

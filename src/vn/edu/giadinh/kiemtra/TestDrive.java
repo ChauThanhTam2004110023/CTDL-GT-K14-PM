@@ -115,7 +115,14 @@ public class TestDrive {
     {
         System.out.println("Nhập hàng cần sửa: ");
         String tenHangHoa = sc.nextLine();
-        ql.suaDS(tenHangHoa);
+        sc.nextLine();
+        System.out.println("Giá: ");
+        int giaNhap = sc.nextInt();
+        System.out.println("Sô lượng tồn kho: ");
+        int soLuongTonKho = sc.nextInt();
+        System.out.println("Ngày nhập kho: ");
+        int ngayNhapKho = sc.nextInt();
+        ql.suaDS(tenHangHoa, giaNhap, soLuongTonKho, ngayNhapKho);
         nhanEnterDeTiepTuc();
         menu();
     }
