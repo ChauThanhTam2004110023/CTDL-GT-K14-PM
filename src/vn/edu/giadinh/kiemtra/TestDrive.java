@@ -16,9 +16,11 @@ public class TestDrive {
         System.out.println("3.Tìm kiếm đầu danh sách");
         System.out.println("4.Thêm vào đầu danh sách");
         System.out.println("5.Xóa hàng");
-        System.out.println("6.Sửa hàng");
-        System.out.println("7.Tăng dần");
-        System.out.println("8.Giảm dần");
+        System.out.println("6.Xóa head");
+        System.out.println("7.Xóa tail");
+        System.out.println("8.Sửa hàng");
+        System.out.println("9.Tăng dần");
+        System.out.println("10.Giảm dần");
         int n = sc.nextInt();
         switch(n)
         {
@@ -27,9 +29,11 @@ public class TestDrive {
             case 3: tim(); break;
             case 4: themDangTruoc(); break;
             case 5: xoaDS(); break;
-            case 6: suaDS(); break;
-            case 7: tangDan(); break;
-            case 8: giamDan(); break;
+            case 6: xoaHead(); break;
+            case 7: xoaTail(); break;
+            case 8: suaDS(); break;
+            case 9: tangDan(); break;
+            case 10: giamDan(); break;
             default: 
             {
                 System.out.println("Du lieu khong dung");
@@ -90,6 +94,20 @@ public class TestDrive {
         System.out.println("Nhập tên hàng cần xóa: ");
         String tenHangHoa = sc.nextLine();
         ql.xoaDS(tenHangHoa);
+        nhanEnterDeTiepTuc();
+        menu();
+    }
+    
+    static void xoaHead()
+    {
+        ql.xoaHead();
+        nhanEnterDeTiepTuc();
+        menu();
+    }
+
+    static void xoaTail()
+    {
+        ql.xoaTail();
         nhanEnterDeTiepTuc();
         menu();
     }
