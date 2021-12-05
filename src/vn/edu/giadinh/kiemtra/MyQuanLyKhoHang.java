@@ -8,8 +8,8 @@ public class MyQuanLyKhoHang {
     Node current;
     Node previous;
     Node snap;
-    Node full;
     Node temp;
+    Node full;
     Scanner sc = new Scanner(System.in);
 
     public MyQuanLyKhoHang()
@@ -289,7 +289,7 @@ public class MyQuanLyKhoHang {
             full = current;
             while(full != null)
             {
-                if(full.giaNhap < snap.giaNhap)
+                if(temp.giaNhap < full.giaNhap)
                 {
                     snap = full;
                 }
@@ -310,7 +310,7 @@ public class MyQuanLyKhoHang {
            full = current;
            while(full != null)
            {
-               if(full.giaNhap > snap.giaNhap)
+               if(temp.giaNhap > full.giaNhap)
                {
                    snap = full;
                }
