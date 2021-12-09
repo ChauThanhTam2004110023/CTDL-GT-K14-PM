@@ -26,7 +26,7 @@ public class TestDrive {
         {
             case 1: themHang(); break;
             case 2: inThongTin(); break;
-            case 3: tim(); break;
+            case 3: timXongInthongTin(); break;
             case 4: themDangTruoc(); break;
             case 5: xoaDS(); break;
             case 6: xoaHead(); break;
@@ -73,7 +73,7 @@ public class TestDrive {
         nhanEnterDeTiepTuc();
         menu();
     }
-    static void tim()
+    static void timXongInthongTin()
     {
         System.out.println("Nhap ten hang can tim: ");
         String tenHangHoa = sc.nextLine();

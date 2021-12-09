@@ -1,11 +1,15 @@
 package vn.edu.giadinh.tuan10;
 
+import java.util.Date;
+
 public class Node {
     String tenHangHoa;
     int giaNhap;
     int soLuongTonKho;
     int ngayNhapKho;
-
+    Date ngay;
+    
+    Date date;
     Node next;
 
     public Node()

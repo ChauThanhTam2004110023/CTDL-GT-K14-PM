@@ -1,12 +1,13 @@
 package vn.edu.giadinh.tuan10;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class MyQuanLyKhoHang {
-   public void MyQuanLyKhoHang()
+   public MyQuanLyKhoHang()
    {
-       add("Den", 10, 10, 2020);
-       add("Trang", 20, 20, 2021);
+       add("Den", 10, 10, 20-11-2020);
+       add("Trang", 20, 20, 1-2-2021);
        add("Vang", 30, 30, 2022);
        add("Tim", 40, 40, 2023);
        add("Nau", 50, 50, 2024);
@@ -17,10 +18,10 @@ public class MyQuanLyKhoHang {
    Node current = null;
    Node previous;
    Scanner sc = new Scanner(System.in);
+   Date date = new Date();
 
    void add(String ten, int gia, int sl, int ngay)
    {
-       MyQuanLyKhoHang();
        Node node = new Node(ten, gia, sl, ngay);
        if(head == null)
        {
@@ -36,7 +37,6 @@ public class MyQuanLyKhoHang {
 
    void inDS()
    {
-       MyQuanLyKhoHang();
        Node current = head;
        if(head == null)
        {

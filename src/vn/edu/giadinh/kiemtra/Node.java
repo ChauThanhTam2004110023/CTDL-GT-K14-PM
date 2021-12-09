@@ -4,7 +4,7 @@ public class Node {
     String tenHangHoa;
     int giaNhap;
     int soLuongTonKho;
-    int ngayNhapKho;
+    String ngayNhapKho;
     Node next;
 
     public Node()
@@ -12,7 +12,7 @@ public class Node {
 
     }
 
-    public Node(String ten, int gia, int sl, int ngay)
+    public Node(String ten, int gia, int sl, String ngay)
     {
         tenHangHoa = ten;
         giaNhap = gia;
