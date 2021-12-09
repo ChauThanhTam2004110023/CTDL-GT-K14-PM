@@ -12,33 +12,34 @@ public class MyQuanLyKhoHang {
     Node full;
     Scanner sc = new Scanner(System.in);
 
+
     public MyQuanLyKhoHang()
     {
-       add("Vang", 10, 10, 2021);
-       add("Tim", 20, 20, 2021);
-       add("Trang", 30, 30, 2021);
-       add("Xanh", 40, 40, 2021);
-       add("Den", 50, 50, 2021);
-       add("Nau", 60, 60, 2021);
-       add("Do", 70, 70, 2021);
-       add("Duong", 80, 80, 2021);
-       add("Cham", 90, 90, 2021);
-       add("Luc", 11, 11, 2021);
-       add("Sac", 12, 12, 2021);
-       add("Cam", 13, 13, 2021);
-       add("Huong", 14, 14, 2021);
-       add("La", 15, 15, 2021);
-       add("La cam", 16, 16, 2021);
-       add("Hong", 17, 17, 2021);
-       add("Tham", 18, 18, 2021);
-       add("Sen", 20, 20, 2021);
-       add("Do nhat", 19, 19, 2021);
-       add("Bac", 21, 21, 2021);
-       add("Si", 22, 22, 2023);
+       add("Vang", 10, 10, "1-1-2021");
+       add("Tim", 20, 20, "1-2-2021");
+       add("Trang", 30, 30, "1-2-2021");
+       add("Xanh", 40, 40, "1-2-2021");
+       add("Den", 50, 50, "1-2-2021");
+       add("Nau", 60, 60, "1-2-2021");
+       add("Do", 70, 70, "1-2-2021");
+       add("Duong", 80, 80, "1-2-2021");
+       add("Cham", 90, 90, "1-2-2021");
+       add("Luc", 11, 11, "1-2-2021");
+       add("Sac", 12, 12, "1-2-2021");
+       add("Cam", 13, 13, "1-2-2021");
+       add("Huong", 14, 14, "1-2-2021");
+       add("La", 15, 15, "1-2-2021");
+       add("La cam", 16, 16, "1-2-2021");
+       add("Hong", 17, 17, "1-2-2021");
+       add("Tham", 18, 18, "1-2-2021");
+       add("Sen", 20, 20, "1-2-2021");
+       add("Do nhat", 19, 19, "1-2-2021");
+       add("Bac", 21, 21, "1-2-2021");
+       add("Si", 22, 22, "1-2-2021");
        
     }
 
-    void add(String ten, int gia, int sl, int ngay)
+    void add(String ten, int gia, int sl, String ngay)
     {
         Node newNode = new Node(ten, gia, sl, ngay);
         if(head == null)
@@ -63,8 +64,9 @@ public class MyQuanLyKhoHang {
         int giaNhap = sc.nextInt();
         System.out.println("Số lượng tồn kho: ");
         int soLuongTonKho = sc.nextInt();
+        sc.nextLine();
         System.out.println("Ngày nhập kho: ");
-        int ngayNhapKho = sc.nextInt();
+        String ngayNhapKho = sc.nextLine();
         Node node = new Node(tenHangHoa, giaNhap, soLuongTonKho, ngayNhapKho); 
         return node;
     } 
@@ -122,7 +124,7 @@ public class MyQuanLyKhoHang {
     {
         if(true == tim(tenHangHoa))
         {
-            current.inThongTin();
+           current.inThongTin();
         }
         else
         {
@@ -167,6 +169,7 @@ public class MyQuanLyKhoHang {
             {
                 return;
             }
+            current.inThongTin();
             previous = previous.next;
         }
     }
@@ -185,17 +188,21 @@ public class MyQuanLyKhoHang {
 
     void xoa(String tenHangHoa)
     {
-        if(current == head)
-        {
-            xoaHead();
-            return;
-        }
-        if(current == tail)
-        {
-            xoaTail();
-            return;
-        }
-        previous.next = previous.next;
+       if(true == tim(tenHangHoa))
+       {
+           if(current == head)
+           {
+               xoaHead();
+           }
+           else if(current == tail)
+           {
+               xoaTail();
+           }
+       }
+       else
+       {
+           System.out.println("Không có trong danh sách");
+       }
     } 
 
     void xoaHead()
@@ -320,4 +327,5 @@ public class MyQuanLyKhoHang {
            current = current.next;
        }
    }
+
 }
